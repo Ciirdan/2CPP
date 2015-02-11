@@ -10,3 +10,9 @@ Ange::Ange()
 Ange::~Ange()
 {
 }
+bool Ange::Incorrect(){
+	return true;//Tempo
+}
+void Ange::ModifierCase(){
+
+}

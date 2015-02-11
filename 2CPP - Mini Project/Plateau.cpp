@@ -10,3 +10,7 @@ Plateau::Plateau()
 Plateau::~Plateau()
 {
 }
+
+void Plateau::Affiche(){
+
+}
