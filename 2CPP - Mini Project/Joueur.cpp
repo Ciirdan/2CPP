@@ -20,3 +20,9 @@ void Joueur::ChoisirCase(){
 void Joueur::Jouer(){
 
 }
+void Joueur::Incorrect(){
+
+}
+void Joueur::ModifierCase(){
+
+}
