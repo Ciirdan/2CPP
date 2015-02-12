@@ -4,10 +4,10 @@
 
 Plateau::Plateau()
 {
-	int t = 35;
-	gameboard = new Case*[t];
-	for (int i = 0; i <= t; i++){
-		gameboard[i] = new Case[t];
+	dim = 35;
+	gameboard = new Case*[dim];
+	for (int i = 0; i < dim; i++){
+		gameboard[i] = new Case[dim];
 	}
 }
 Plateau::Plateau(const int& d){
@@ -23,16 +23,16 @@ Plateau::Plateau(const int& d){
 
 Plateau::~Plateau()
 {
-	delete[] gameboard;
+	
 }
 
 void Plateau::Affiche(){
 	for (int i = 0; i < dim; i++){
 		for (int j = 0; j < dim; j++){
-			if (gameboard[i][j].GetBroken == true){
+			if (gameboard[i][j].GetBroken() == true){
 				cout << " x";
 			}
-			else if (gameboard[i][j].GetFree == false){
+			else if (gameboard[i][j].GetFree() == false){
 				cout << " o";
 			}
 			else{

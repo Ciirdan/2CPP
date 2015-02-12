@@ -8,6 +8,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	Plateau plateau = Plateau();
 	plateau.Affiche();
+	getchar();
 	return 0;
 }
 
