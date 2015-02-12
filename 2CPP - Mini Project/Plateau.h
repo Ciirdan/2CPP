@@ -1,6 +1,7 @@
 #pragma once
 #include "Case.h"
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 class Plateau

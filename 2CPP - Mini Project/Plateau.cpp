@@ -11,8 +11,10 @@ Plateau::Plateau()
 	}
 }
 Plateau::Plateau(const int& d){
-	dim = d;
-	if (dim % 2 != 0 )
+	dim = abs(d);
+	if (dim % 2 != 1){
+		dim++;
+	}
 	gameboard = new Case*[dim];
 	for (int i = 0; i <= dim; i++){
 		gameboard[i] = new Case[dim];
@@ -28,16 +30,15 @@ void Plateau::Affiche(){
 	for (int i = 0; i < dim; i++){
 		for (int j = 0; j < dim; j++){
 			if (gameboard[i][j].GetBroken == true){
-				cout << "x";
+				cout << " x";
 			}
 			else if (gameboard[i][j].GetFree == false){
-				cout << "o";
+				cout << " o";
 			}
-			else
-			{
-				cout << ".";
+			else{
+				cout << " .";
 			}
-			cout << " ";
+			//cout << " ";
 		}
 		cout << endl;
 	}

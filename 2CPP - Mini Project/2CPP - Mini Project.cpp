@@ -2,10 +2,12 @@
 //
 
 #include "stdafx.h"
-
+#include "Plateau.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	Plateau plateau = Plateau();
+	plateau.Affiche();
 	return 0;
 }
 
