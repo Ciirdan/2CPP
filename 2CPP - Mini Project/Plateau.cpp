@@ -23,11 +23,13 @@ Plateau::Plateau(const int& d){
 
 Plateau::~Plateau()
 {
-	
+	delete[] gameboard;
 }
 
 void Plateau::Affiche(){
+	system("cls");
 	for (int i = 0; i < dim; i++){
+		cout << " ";
 		for (int j = 0; j < dim; j++){
 			if (gameboard[i][j].GetBroken() == true){
 				cout << " x";
@@ -38,7 +40,6 @@ void Plateau::Affiche(){
 			else{
 				cout << " .";
 			}
-			//cout << " ";
 		}
 		cout << endl;
 	}
