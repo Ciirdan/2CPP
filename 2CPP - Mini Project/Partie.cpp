@@ -4,7 +4,7 @@
 
 Partie::Partie(int dim)
 {
-	Plateau(dim);
+	plateau = Plateau(dim);
 	joueurs[0] = new Ange();
 	joueurs[1] = new Demon();
 }

@@ -1,6 +1,6 @@
 #pragma once
 #include "Joueur.h"
-class Ange
+class Ange : public Joueur
 {
 public:
 	Ange();
@@ -11,4 +11,3 @@ private:
 	int ligne;
 	int colonne;
 };
-

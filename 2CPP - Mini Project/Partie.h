@@ -13,6 +13,6 @@ public:
 	void TourDeJeu();
 private:
 	Plateau plateau;
-	Joueur joueurs[2];
+	Joueur *joueurs[2];
 };
 
