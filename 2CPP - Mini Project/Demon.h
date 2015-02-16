@@ -1,5 +1,7 @@
 #pragma once
-class Demon
+#include "Joueur.h"
+
+class Demon : public Joueur
 {
 public:
 	Demon();
@@ -7,4 +9,3 @@ public:
 	virtual bool Incorrect();
 	virtual void ModifierCase();
 };
-

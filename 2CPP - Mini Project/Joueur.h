@@ -8,8 +8,8 @@ public:
 	void Saisir();
 	void ChoisirCase();
 	void Jouer(); 
-	virtual void Incorrect(); 
-	virtual void ModifierCase();
+	virtual bool Incorrect() = 0; 
+	virtual void ModifierCase() = 0;
 protected:
 	std::string pseudo;
 };
