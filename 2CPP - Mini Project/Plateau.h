@@ -11,7 +11,7 @@ public:
 	Plateau(const int& d);
 	~Plateau();
 	void Affiche();
-	
+	void SetDim(int d);
 private:
 	Case **gameboard;
 	int dim;
