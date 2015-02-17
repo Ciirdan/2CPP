@@ -1,10 +1,10 @@
 #pragma once
 #include "Joueur.h"
 
-class Demon : public Joueur
+class Demon : virtual public Joueur
 {
 public:
-	Demon();
+	Demon(std::string name);
 	~Demon();
 	virtual bool Incorrect();
 	virtual void ModifierCase();

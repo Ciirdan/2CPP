@@ -1,9 +1,9 @@
 #pragma once
 #include "Joueur.h"
-class Ange : public Joueur
+class Ange :  virtual public Joueur
 {
 public:
-	Ange();
+	Ange(const std::string& pseudo, const int& dim);
 	~Ange();
 	virtual bool Incorrect();
 	virtual void ModifierCase();

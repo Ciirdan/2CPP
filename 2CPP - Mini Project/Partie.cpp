@@ -5,8 +5,8 @@
 Partie::Partie(int dim)
 {
 	plateau = Plateau(dim);
-	joueurs[0] = new Ange();
-	joueurs[1] = new Demon();
+	joueurs[0] = new Ange("Paul", dim);
+	joueurs[1] = new Demon("Michel");
 }
 
 

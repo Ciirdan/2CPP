@@ -2,8 +2,9 @@
 #include "Demon.h"
 
 
-Demon::Demon()
+Demon::Demon(std::string name)
 {
+	pseudo = name;
 }
 
 

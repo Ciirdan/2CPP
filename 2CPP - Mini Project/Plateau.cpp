@@ -44,7 +44,3 @@ void Plateau::Affiche(){
 		cout << endl;
 	}
 }
-/*
-void Plateau::SetDim(int d){
-	dim = d;
-}*/

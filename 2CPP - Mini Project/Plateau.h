@@ -4,14 +4,13 @@
 #include <cmath>
 using namespace std;
 
-class Plateau
+static class Plateau
 {
 public:
 	Plateau();
 	Plateau(const int& d);
 	~Plateau();
 	void Affiche();
-	void SetDim(int d);
 private:
 	Case **gameboard;
 	int dim;
