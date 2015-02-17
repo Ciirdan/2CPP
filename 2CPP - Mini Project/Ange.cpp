@@ -13,8 +13,9 @@ Ange::Ange(const std::string& name,const int& dim = 35)
 Ange::~Ange()
 {
 }
-bool Ange::Incorrect(){
 
+bool Ange::Incorrect(){
+	return true;
 }
 void Ange::ModifierCase(){
 

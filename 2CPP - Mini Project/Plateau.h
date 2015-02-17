@@ -4,7 +4,7 @@
 #include <cmath>
 using namespace std;
 
-static class Plateau
+class Plateau
 {
 public:
 	Plateau();
