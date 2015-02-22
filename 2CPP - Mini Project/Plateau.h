@@ -10,6 +10,7 @@ public:
 	Plateau();
 	Plateau(const int& d);
 	~Plateau();
+	int GetDim();
 	void Affiche();
 private:
 	Case **gameboard;

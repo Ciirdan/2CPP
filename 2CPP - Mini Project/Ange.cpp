@@ -15,6 +15,7 @@ Ange::~Ange()
 }
 
 bool Ange::Incorrect(){
+	
 	return true;
 }
 void Ange::ModifierCase(){
