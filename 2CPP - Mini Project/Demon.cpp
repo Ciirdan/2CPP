@@ -15,6 +15,6 @@ Demon::~Demon()
 bool Demon::Incorrect(){
 	return true; //temp
 }
-void Demon::ModifierCase(){
+void Demon::ModifierCase(Plateau d){
 
 }

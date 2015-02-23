@@ -7,5 +7,5 @@ public:
 	Demon(std::string name);
 	~Demon();
 	virtual bool Incorrect();
-	virtual void ModifierCase();
+	virtual void ModifierCase(Plateau d);
 };

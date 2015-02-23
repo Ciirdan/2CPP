@@ -17,6 +17,7 @@ void Joueur::Saisir(){
 void Joueur::ChoisirCase(){
 
 }
-void Joueur::Jouer(){
-
+void Joueur::Jouer(Plateau d){
+	d.Affiche();
+	ModifierCase(d);
 }

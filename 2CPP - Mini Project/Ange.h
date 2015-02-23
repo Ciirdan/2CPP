@@ -6,7 +6,7 @@ public:
 	Ange(const std::string& pseudo, const int& dim);
 	~Ange();
 	virtual bool Incorrect();
-	virtual void ModifierCase();
+	virtual void ModifierCase(Plateau d);
 private:
 	int ligne;
 	int colonne;

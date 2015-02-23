@@ -25,10 +25,10 @@ void Partie::TourDeJeu(){
 
 	while (true){
 		if (counter % 2 == 0){
-			joueurs[0].Jouer();
+			(*joueurs[0]).Jouer(plateau);
 		}
 		else{
-			// player X
+			(*joueurs[1]).Jouer(plateau);
 		}
 		counter++;
 	}
