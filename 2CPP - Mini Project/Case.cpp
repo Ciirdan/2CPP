@@ -25,3 +25,14 @@ bool Case::GetFree(){
 void Case::SetFree(const bool& f){
 	free = f;
 }
+int Case::GetStatus(){
+	if (broken == true){
+		return 1;
+	}
+	else if (free == false && broken == false){
+		return 2;
+	}
+	else if (broken == false && free == true){
+		return 3;
+	}
+}

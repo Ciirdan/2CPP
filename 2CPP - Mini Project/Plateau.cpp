@@ -35,13 +35,14 @@ void Plateau::Affiche(){
 	for (int i = 0; i < dim; i++){
 		cout << " ";
 		for (int j = 0; j < dim; j++){
-			if (gameboard[i][j].GetBroken() == true){
+
+			if (gameboard[i][j].GetStatus() == 1){
 				cout << " x";
 			}
-			else if (gameboard[i][j].GetFree() == false){
+			else if (gameboard[i][j].GetStatus() == 2){
 				cout << " o";
 			}
-			else{
+			else if (gameboard[i][j].GetStatus() == 3){
 				cout << " .";
 			}
 		}

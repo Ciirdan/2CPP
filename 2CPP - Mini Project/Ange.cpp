@@ -15,12 +15,12 @@ Ange::~Ange()
 {
 }
 
-bool Ange::Incorrect(){
+bool Ange::Incorrect(int x, int y, Plateau d){
 	
 	return true;
 }
 void Ange::ModifierCase(Plateau d){
-	cout << "  Tour de l'ange" << endl;
+	cout << "  Tour de " /*<< pseudo*/ << ": " << endl;
 	cout << "Ligne: ";
 	int l = getchar();
 	cout << endl << "Colonne: ";

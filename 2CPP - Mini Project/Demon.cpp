@@ -12,7 +12,7 @@ Demon::~Demon()
 {
 }
 
-bool Demon::Incorrect(){
+bool Demon::Incorrect(int x, int y, Plateau d){
 	return true; //temp
 }
 void Demon::ModifierCase(Plateau d){

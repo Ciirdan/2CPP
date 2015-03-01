@@ -8,6 +8,7 @@ public:
 	void SetBroken(const bool& b);
 	bool GetFree();
 	void SetFree(const bool& f);
+	int GetStatus();
 private:
 	bool broken;
 	bool free;
