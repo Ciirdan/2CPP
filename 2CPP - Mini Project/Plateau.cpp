@@ -30,19 +30,23 @@ int Plateau::GetDim(){
 	return dim;
 }
 
+int Plateau::GetStatusCase(const int& x, const int& y){
+	return gameboard[x][y].GetStatus();
+}
+
 void Plateau::Affiche(){
 	system("cls");
 	for (int i = 0; i < dim; i++){
 		cout << " ";
 		for (int j = 0; j < dim; j++){
-
-			if (gameboard[i][j].GetStatus() == 1){
+			int status = gameboard[i][j].GetStatus();
+			if (status == 1){		//Cassé
 				cout << " x";
 			}
-			else if (gameboard[i][j].GetStatus() == 2){
+			else if (status == 2){	//Ange
 				cout << " o";
 			}
-			else if (gameboard[i][j].GetStatus() == 3){
+			else if (status == 3){	//Vide
 				cout << " .";
 			}
 		}

@@ -21,15 +21,9 @@ Partie::~Partie()
 }
 
 void Partie::TourDeJeu(){
-	int counter = 0;
-
 	while (true){
-		if (counter % 2 == 0){
-			(*joueurs[0]).Jouer(plateau);
+		for each(Joueur* joueur in joueurs){
+			(*joueur).Jouer(plateau);
 		}
-		else{
-			(*joueurs[1]).Jouer(plateau);
-		}
-		counter++;
 	}
 }

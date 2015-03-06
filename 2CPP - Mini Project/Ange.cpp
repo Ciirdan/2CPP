@@ -16,7 +16,9 @@ Ange::~Ange()
 }
 
 bool Ange::Incorrect(int x, int y, Plateau d){
-	
+	if (d.GetStatusCase(x, y) == 1){
+
+	}
 	return true;
 }
 void Ange::ModifierCase(Plateau d){

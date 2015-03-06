@@ -1,6 +1,5 @@
 #pragma once
 #include "Plateau.h"
-#include "Joueur.h"
 #include "Ange.h"
 #include "Demon.h"
 

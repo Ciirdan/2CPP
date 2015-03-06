@@ -11,6 +11,7 @@ public:
 	Plateau(const int& d);
 	~Plateau();
 	int GetDim();
+	int GetStatusCase(const int& x, const int& y);
 	void Affiche();
 private:
 	Case **gameboard;
