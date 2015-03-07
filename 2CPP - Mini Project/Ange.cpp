@@ -10,21 +10,26 @@ Ange::Ange(const std::string& name,const int& dim = 35)
 
 }
 
-
 Ange::~Ange()
 {
 }
 
 bool Ange::Incorrect(int x, int y, Plateau d){
-	if (d.GetStatusCase(x, y) == 1){
+	int dim = d.GetDim();
+	if (x > dim || y > dim || x < 0 || y < 0){
+		return false;
+	}
 
+	int status = d.GetStatusCase(x, y);
+	if (status == 1 || status == 2){
+		return false;
+	}
+	if (abs(ligne - x) != 1 || abs(colonne - y) != 1){
+		return false;
 	}
 	return true;
 }
-void Ange::ModifierCase(Plateau d){
-	cout << "  Tour de " /*<< pseudo*/ << ": " << endl;
-	cout << "Ligne: ";
-	int l = getchar();
-	cout << endl << "Colonne: ";
-	int c = getchar();
+
+void Ange::ModifierCase(Case* c){
+	
 }

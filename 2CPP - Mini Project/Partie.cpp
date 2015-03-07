@@ -11,8 +11,8 @@ Partie::Partie(){
 Partie::Partie(int dim = 35)
 {
 	plateau = Plateau(dim);
-	joueurs[0] = new Ange("Paul", dim);
-	joueurs[1] = new Demon("Michel");
+	joueurs[0] = new Ange("Ange", dim);
+	joueurs[1] = new Demon("Demon");
 }
 
 
@@ -23,6 +23,7 @@ Partie::~Partie()
 void Partie::TourDeJeu(){
 	while (true){
 		for each(Joueur* joueur in joueurs){
+			plateau.Affiche();
 			(*joueur).Jouer(plateau);
 		}
 	}

@@ -15,6 +15,6 @@ Demon::~Demon()
 bool Demon::Incorrect(int x, int y, Plateau d){
 	return true; //temp
 }
-void Demon::ModifierCase(Plateau d){
+void Demon::ModifierCase(Case* c){
 
 }

@@ -34,6 +34,10 @@ int Plateau::GetStatusCase(const int& x, const int& y){
 	return gameboard[x][y].GetStatus();
 }
 
+Case* Plateau::GetCase(const int& x, const int& y){
+	return &gameboard[x][y];
+}
+
 void Plateau::Affiche(){
 	system("cls");
 	for (int i = 0; i < dim; i++){
