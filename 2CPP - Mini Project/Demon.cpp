@@ -2,9 +2,8 @@
 #include "Demon.h"
 
 
-Demon::Demon(std::string name)
+Demon::Demon(const string& name)
 {
-	pseudo = name;
 }
 
 
@@ -15,6 +14,6 @@ Demon::~Demon()
 bool Demon::Incorrect(int x, int y, Plateau d){
 	return true; //temp
 }
-void Demon::ModifierCase(Case* c){
+void Demon::ModifierCase(Case* c, Plateau d){
 
 }

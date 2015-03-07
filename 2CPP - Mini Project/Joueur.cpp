@@ -1,9 +1,13 @@
 #include "stdafx.h"
 #include "Joueur.h"
 
+Joueur::Joueur(){
 
-Joueur::Joueur()
+}
+
+Joueur::Joueur(const string& name)
 {
+	pseudo = name;
 }
 
 
@@ -35,5 +39,5 @@ Case* Joueur::ChoisirCase(Plateau d){
 void Joueur::Jouer(Plateau d){
 	Case* c = ChoisirCase(d);
 
-	ModifierCase(c);
+	ModifierCase(c, d);
 }

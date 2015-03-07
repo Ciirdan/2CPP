@@ -38,6 +38,10 @@ Case* Plateau::GetCase(const int& x, const int& y){
 	return &gameboard[x][y];
 }
 
+Case** Plateau::GetGameboard(){
+	return gameboard;
+}
+
 void Plateau::Affiche(){
 	system("cls");
 	for (int i = 0; i < dim; i++){

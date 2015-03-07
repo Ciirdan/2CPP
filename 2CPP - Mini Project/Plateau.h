@@ -13,6 +13,7 @@ public:
 	int GetDim();
 	int GetStatusCase(const int& x, const int& y);
 	Case* GetCase(const int& x, const int& y);
+	Case** GetGameboard();
 	void Affiche();
 private:
 	Case **gameboard;
