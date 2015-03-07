@@ -17,7 +17,6 @@ bool Case::GetBroken(){
 }	 
 void Case::SetBroken(const bool& b){
 	broken = b;
-	free = false;
 }	 
 bool Case::GetFree(){
 	return free;

@@ -4,6 +4,8 @@
 
 Ange::Ange(const string& name, Plateau& d)
 {
+	pseudo = name;
+
 	ligne = (d.GetDim() / 2) + 1;
 	colonne = (d.GetDim() / 2) + 1;
 
@@ -28,7 +30,7 @@ bool Ange::Incorrect(int x, int y, Plateau d){
 	return true;
 }
 
-void Ange::ModifierCase(Case* c, Plateau d){
+void Ange::ModifierCase(Plateau d, Case* c){
 	int dim = d.GetDim();
 	Case** gameboard = d.GetGameboard();
 

@@ -39,5 +39,5 @@ Case* Joueur::ChoisirCase(Plateau d){
 void Joueur::Jouer(Plateau d){
 	Case* c = ChoisirCase(d);
 
-	ModifierCase(c, d);
+	ModifierCase(d, c);
 }
