@@ -23,7 +23,6 @@ Plateau::Plateau(const int& d){
 
 Plateau::~Plateau()
 {
-	//delete[] gameboard; //Faux
 }
 
 int Plateau::GetDim(){

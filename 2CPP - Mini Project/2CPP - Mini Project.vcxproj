@@ -77,6 +77,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Ange.h" />
+    <ClInclude Include="AngePuissant.h" />
     <ClInclude Include="Case.h" />
     <ClInclude Include="Demon.h" />
     <ClInclude Include="Joueur.h" />
@@ -88,6 +89,7 @@
   <ItemGroup>
     <ClCompile Include="2CPP - Mini Project.cpp" />
     <ClCompile Include="Ange.cpp" />
+    <ClCompile Include="AngePuissant.cpp" />
     <ClCompile Include="Case.cpp" />
     <ClCompile Include="Demon.cpp" />
     <ClCompile Include="Joueur.cpp" />
