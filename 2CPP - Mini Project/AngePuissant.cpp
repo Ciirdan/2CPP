@@ -19,7 +19,7 @@ bool AngePuissant::Incorrect(int x, int y, Plateau d){
 	}
 
 	int status = d.GetStatusCase(x, y);
-	if (status == 1 || status == 2 || abs(ligne - x) != puissance || abs(colonne - y) != puissance){
+	if (status == 1 || status == 2 || (abs(ligne - x) + abs(colonne - y)) <= puissance){
 		return false;
 	}
 	return true;

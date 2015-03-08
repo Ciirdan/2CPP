@@ -64,3 +64,19 @@ void Plateau::Affiche(){
 		cout << endl;
 	}
 }
+
+Case** Plateau::operator++(void){
+	int newDim = dim + 1;
+	Case** newGameboard = new Case*[newDim];
+
+	for (int i = 0; i <= newDim; i++){
+		newGameboard[i] = new Case[newDim];
+	}
+	for (int x = 0; x < dim; x++){
+		for (int y = 0; y < dim; y++){
+			newGameboard[x + 1][y + 1] = gameboard[x][y];
+		}
+	}
+	dim = newDim;
+	return newGameboard;
+}
