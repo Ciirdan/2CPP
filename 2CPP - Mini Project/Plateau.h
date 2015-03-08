@@ -11,6 +11,7 @@ public:
 	Plateau(const int& d);
 	~Plateau();
 	int GetDim();
+	void SetDim(const int& d);
 	int GetStatusCase(const int& x, const int& y);
 	Case* GetCase(const int& x, const int& y);
 	Case** GetGameboard();

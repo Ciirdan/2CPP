@@ -22,9 +22,13 @@ Partie::~Partie()
 
 void Partie::TourDeJeu(){
 	while (true){
-		for each(Joueur* joueur in joueurs){
+		for each(Joueur* j in joueurs){
 			plateau.Affiche();
-			(*joueur).Jouer(plateau);
+			(*j).Jouer(plateau);
+			if ((*joueurs[0]).Victory(plateau)){
+				cout << (*j).GetName() << " gagne !" << endl;
+				break;
+			}
 		}
 	}
 }

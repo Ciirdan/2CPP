@@ -5,9 +5,10 @@
 Ange::Ange(const string& name, Plateau& d)
 {
 	pseudo = name;
+	int dim = d.GetDim();
 
-	ligne = (d.GetDim() / 2) + 1;
-	colonne = (d.GetDim() / 2) + 1;
+	ligne = dim / 2;
+	colonne = dim / 2;
 
 	Case** gameboard = d.GetGameboard();
 	gameboard[ligne][colonne].SetFree(false);
@@ -24,23 +25,32 @@ bool Ange::Incorrect(int x, int y, Plateau d){
 	}
 
 	int status = d.GetStatusCase(x, y);
-	if (status == 1 || status == 2 || abs(ligne - x) != 1 || abs(colonne - y) != 1){
+	if (status == 1 || status == 2 || (abs(ligne - x) + abs(colonne - y)) != 1){
 		return false;
 	}
 	return true;
 }
 
-void Ange::ModifierCase(Plateau d, Case* c){
-	int dim = d.GetDim();
+void Ange::ModifierCase(Plateau d, int x ,int y){
 	Case** gameboard = d.GetGameboard();
+	Case* oldC = &gameboard[ligne][colonne];
 
-	for (int x = 0; x <= dim; x++){
-		for (int y = 0; y <= dim; y++){
-			if (gameboard[x][y].GetFree() == false){
-				gameboard[x][y].SetFree(true);
-			}
-		}
+	(*oldC).SetFree(true);
+
+	ligne = x;
+	colonne = y;
+
+	Case* newC = &gameboard[x][y];
+	(*newC).SetFree(false);
+}
+
+bool Ange::Victory(Plateau d){
+	if (colonne == 0 || ligne == 0 || ligne == d.GetDim() || colonne == d.GetDim()){
+		return true;
 	}
-
-	(*c).SetFree(false);
+	Case** gameboard = d.GetGameboard();
+	if (!Incorrect(ligne + 1, colonne, d) && !Incorrect(ligne, colonne + 1, d) && !Incorrect(ligne - 1, colonne, d) && !Incorrect(ligne, colonne - 1, d)){
+		return true;
+	}
+	return false;
 }

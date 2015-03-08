@@ -21,23 +21,26 @@ int Joueur::Saisir(){
 	return a;
 }
 
-Case* Joueur::ChoisirCase(Plateau d){
-	int x = 0;
-	int y = 0;
+int* Joueur::ChoisirCase(Plateau d){
+	int coor[2];
 
 	do{
 		cout << "  Tour de " << pseudo << ": " << endl;
 		cout << "Ligne: ";
-		int l = Saisir();
+		coor[0] = Saisir();
 		cout << endl << "Colonne: ";
-		int c = Saisir();
-	} while (Incorrect(x, y, d) == false);
+		coor[1] = Saisir();
+	} while (Incorrect(coor[0], coor[1], d) == false);
 
-	return d.GetCase(x, y);
+	return coor;
 }
 
 void Joueur::Jouer(Plateau d){
-	Case* c = ChoisirCase(d);
+	int* c = ChoisirCase(d);
 
-	ModifierCase(d, c);
+	ModifierCase(d, c[0], c[1]);
+}
+
+string Joueur::GetName(){
+	return pseudo;
 }

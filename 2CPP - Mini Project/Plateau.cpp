@@ -29,6 +29,10 @@ int Plateau::GetDim(){
 	return dim;
 }
 
+void Plateau::SetDim(const int& d){
+	dim = d;
+}
+
 int Plateau::GetStatusCase(const int& x, const int& y){
 	return gameboard[x][y].GetStatus();
 }

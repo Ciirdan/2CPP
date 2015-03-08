@@ -16,31 +16,25 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << "     ANGES & DEMONS" << endl << endl;
 		cout << "Voulez vous choisir la taille de la grille ? (Y/N)" << endl;
 		string size;
-		while (true){
+
+		bool i = true;
+		do{
 			cin >> size;
 			if (size == "Y" || size == "y"){
 				cout << "Entrez la taille de la grille (impair et positif), vide pour valeur par défaut:";
 				int dim;
-				dim = getchar(); // Verif
+				cin >> dim;
 				partie = Partie(dim);
-				return false;
+				i = false;
 			}
 			else if (size == "N" || size == "n"){
 				partie = Partie();
-				partie.TourDeJeu();
-				return false;
+				i = false;
 			}
-		}
-
-		
-		getchar();	//Taille de la grille fonction
-		//Partie partie = Partie();
+		} while (i == true);
+		partie.TourDeJeu();
 		return false;
 	}
-	Plateau plateau = Plateau();
-	
-	plateau.Affiche();
-	getchar();
 	return 0;
 }
 

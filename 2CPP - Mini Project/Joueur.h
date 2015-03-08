@@ -11,10 +11,12 @@ public:
 	Joueur(const string& name);
 	~Joueur();
 	int Saisir();
-	Case* ChoisirCase(Plateau d);
+	int* ChoisirCase(Plateau d);
 	void Jouer(Plateau p); 
 	virtual bool Incorrect(int x, int y, Plateau d) = 0;
-	virtual void ModifierCase(Plateau d, Case* c) = 0;
+	virtual void ModifierCase(Plateau d, int x, int y) = 0;
+	virtual bool Victory(Plateau d) = 0;
+	string GetName();
 protected:
 	string pseudo;
 };
