@@ -11,30 +11,44 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Partie partie;
+newGame:;
 	while (true){
 		system("cls");
 		cout << "     ANGES & DEMONS" << endl << endl;
 		cout << "Voulez vous choisir la taille de la grille ? (Y/N)" << endl;
-		string size;
+		string input;
 
-		bool i = true;
 		do{
-			cin >> size;
-			if (size == "Y" || size == "y"){
+			cin >> input;
+			if (input == "Y" || input == "y"){
 				cout << "Entrez la taille de la grille (impair et positif), vide pour valeur par défaut:";
 				int dim;
 				cin >> dim;
 				partie = Partie(dim);
-				i = false;
+				break;
 			}
-			else if (size == "N" || size == "n"){
+			else if (input == "N" || input == "n"){
 				partie = Partie();
-				i = false;
+				break;
 			}
-		} while (i == true);
+		} while (true);
+
 		partie.TourDeJeu();
-		return false;
+
+		cout << "Voulez vous faire une autre partie ? (Y/N)" << endl;
+		string input2;
+
+		do{
+			cin >> input2;
+			if (input2 == "Y" || input2 == "y"){
+				goto newGame;
+			}
+			else if (input2 == "N" || input2 == "n"){
+				goto endGame;
+			}
+		} while (true);
 	}
+endGame:;
 	return 0;
 }
 

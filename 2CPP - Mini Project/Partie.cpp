@@ -27,8 +27,9 @@ void Partie::TourDeJeu(){
 			(*j).Jouer(plateau);
 			if ((*joueurs[0]).Victory(plateau)){
 				cout << (*j).GetName() << " gagne !" << endl;
-				break;
+				goto exitLoop;
 			}
 		}
 	}
+exitLoop:;
 }
