@@ -65,8 +65,8 @@ void Plateau::Affiche(){
 	}
 }
 
-Case** Plateau::operator++(void){
-	int newDim = dim + 1;
+Plateau& Plateau::operator++(void){
+	int newDim = dim + 2;
 	Case** newGameboard = new Case*[newDim];
 
 	for (int i = 0; i <= newDim; i++){
@@ -77,6 +77,8 @@ Case** Plateau::operator++(void){
 			newGameboard[x + 1][y + 1] = gameboard[x][y];
 		}
 	}
-	dim = newDim;
-	return newGameboard;
+	(*this).gameboard = newGameboard;
+	(*this).dim = newDim;
+
+	return *this;
 }

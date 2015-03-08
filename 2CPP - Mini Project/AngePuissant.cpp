@@ -24,3 +24,7 @@ bool AngePuissant::Incorrect(int x, int y, Plateau d){
 	}
 	return true;
 }
+
+bool AngePuissant::Victory(Plateau d){
+	return false;
+}

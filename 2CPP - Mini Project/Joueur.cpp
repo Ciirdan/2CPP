@@ -17,7 +17,11 @@ Joueur::~Joueur()
 
 int Joueur::Saisir(){
 	int a = 0;
-	cin >> a;
+	do{
+		cin.clear();
+		cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+		cin >> a;
+	} while (cin.fail());
 	return a;
 }
 

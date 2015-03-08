@@ -16,7 +16,7 @@ public:
 	Case* GetCase(const int& x, const int& y);
 	Case** GetGameboard();
 	void Affiche();
-	Case** operator++(void);
+	Plateau& operator++(void);
 private:
 	Case **gameboard;
 	int dim;
